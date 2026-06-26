@@ -1,4 +1,4 @@
-# n8n-nodes-searxng
+# n8n-nodes-searxng-tool
 
 This is an n8n community node that integrates the [SearXNG](https://github.com/searxng/searxng) search engine into your n8n workflows. It can be used as a standalone node to fetch search results or attached to an **AI Agent** node as a **Web Search Tool**.
 
@@ -16,7 +16,7 @@ To install this community node in your n8n instance:
 
 1. Go to **Settings > Community Nodes**.
 2. Click **Install a new node**.
-3. Enter the npm package name: `n8n-nodes-searxng`
+3. Enter the npm package name: `n8n-nodes-searxng-tool`
 4. Agree to the risks and click **Install**.
 
 *For more details, see n8n's [Community Nodes Installation Guide](https://docs.n8n.io/integrations/community-nodes/installation/).*
@@ -46,8 +46,14 @@ When used as a standard n8n workflow node, it outputs search results as a list o
 - **Page Number**: Specify the result page (starts from `1`).
 - **Safe Search**: SafeSearch filter level (Off, Moderate, Strict).
 - **Additional Options**:
+  - **HTTP Method**: Choose between `GET` (default) and `POST` queries. POST requests are more private but might not be supported by all instances.
   - **Engines**: Comma-separated list of specific engines to query (e.g., `google,bing,wikipedia`).
   - **Language**: Language code filter (e.g., `en-US`, `de-DE`).
+  - **Image Proxy**: Proxy image results directly through the SearXNG instance (rewrites URLs).
+  - **Preferences String**: Pass your base64 encoded user preferences token from the SearXNG preferences page.
+  - **Private Engine Tokens**: Comma-separated access tokens for locked/private engines configured on your SearXNG instance.
+  - **Theme**: Specify layout layout styles (e.g., `simple`).
+  - **Results on New Tab**: Request result links to be marked for opening in new tabs.
   - **Limit**: Max number of search results to return (default: `10`).
   - **Raw Response**: Return the complete, unmodified JSON payload from the SearXNG API.
 
@@ -72,7 +78,7 @@ If you want to modify this node or build it locally:
 
 1. Clone your repository:
    ```bash
-   git clone https://github.com/danev/n8n-nodes-searxng.git
+   git clone https://github.com/DanEvenSegler/n8n-nodes-searxng.git
    cd n8n-nodes-searxng
    ```
 2. Install dependencies:
@@ -87,7 +93,7 @@ If you want to modify this node or build it locally:
    ```bash
    npm link
    # In your local n8n installation directory (~/.n8n)
-   npm link n8n-nodes-searxng
+   npm link n8n-nodes-searxng-tool
    ```
 5. Run the node in watch/development mode:
    ```bash

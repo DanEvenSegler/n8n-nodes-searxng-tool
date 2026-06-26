@@ -1,6 +1,6 @@
 {
-	"name": "n8n-nodes-searxng",
-	"version": "1.0.0",
+	"name": "n8n-nodes-searxng-tool",
+	"version": "1.1.0",
 	"description": "n8n integration node for SearXNG, compatible as an AI agent tool",
 	"license": "MIT",
 	"homepage": "https://github.com/searxng/searxng",
