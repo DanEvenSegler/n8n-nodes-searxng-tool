@@ -11,7 +11,7 @@ export class Searxng implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'SearXNG',
 		name: 'searxng',
-		icon: 'file:searxng.svg',
+		icon: 'file:searxng.png',
 		group: ['transform'],
 		version: 1,
 		description: 'Perform web searches using a SearXNG instance.',

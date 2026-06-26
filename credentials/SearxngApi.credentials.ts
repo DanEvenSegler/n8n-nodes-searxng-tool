@@ -9,7 +9,7 @@ export class SearxngApi implements ICredentialType {
 
 	displayName = 'SearXNG API';
 
-	icon: Icon = { light: 'file:../icons/searxng.svg', dark: 'file:../icons/searxng.svg' };
+	icon: Icon = { light: 'file:../icons/searxng.png', dark: 'file:../icons/searxng.png' };
 
 	documentationUrl = 'https://docs.searxng.org/dev/search_api.html';
 
